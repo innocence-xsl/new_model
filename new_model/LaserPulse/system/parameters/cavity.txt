@@ -1,0 +1,25 @@
+# === 光谱整形腔体参数配置 ===
+# 目标：复现100fs参数
+
+# 1. 基础几何参数
+length = 2.0           # 腔长 [m] (决定往返时间 Trt = 2L/c)
+arm_ratio = 0.6        # 短臂/长臂比 (用于V型腔设计，预留)
+
+# 2. 损耗参数
+loss_passive = 0.03    # 单程被动损耗 (3%) - 包含TFP, 漏光, 吸收
+loss_active = 0.0      # 主动损耗 (Pockels Cell 开关残留)
+
+# 3. 光谱整形损耗(腔内)
+loss_shaping_depth = 0.00         # 光谱调制深度，一般控制在0.5% - 2%
+loss_shaping_center = 1040e-9     # 光谱调制中心波长 [m]
+loss_shaping_width_nm = 15.0      # 光谱调制带宽 (FWHM) [nm] - 为了直观常用nm，在代码里乘e-9
+
+# 4. 模场参数 (用于模式匹配计算)
+mode_radius = 200e-6   # 晶体处的腔模半径 [m] (理想情况应等于泵浦光斑)
+M2_factor = 1.1        # 光束质量因子 (理想高斯光束=1.0)
+
+# 5. 镜片参数 (预留给 ABCD 矩阵计算)
+roc_concave = 2.0      # 凹面镜曲率半径 [m]
+angle_fold = 10.0      # 折叠角 [deg] (用于像散计算)
+
+extraction_efficiency = 0.9  # 提取效率(考虑腔内损耗导致的能量泄露)
