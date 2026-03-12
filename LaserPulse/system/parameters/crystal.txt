@@ -1,0 +1,18 @@
+# === 光谱整形晶体参数配置 ===
+# 目标：复现100fs参数
+
+thickness = 8e-3          # 晶体长度 [m]    |  6mm
+num_disks = 1             # 晶体数量
+doping_at_percent = 1.5   # 掺杂浓度(at.%)  |  Yb3+掺杂浓度 (2-5都可以实现)
+N_total_base = 1.25e28    # 基质离子密度基数 [ions/m^3]
+tau_f = 420e-6            # 上能级寿命 [s]
+
+n2 = 4.0e-20              # 非线性折射率 [m^2/W]
+K_c = 6.9                 # 热导率
+dn_dT = 0.0               # 热光系数
+
+mode_overlap_efficiency = 0.60       # 模式匹配效率
+thermal_loss_coefficient = 0.0015    # 热损耗系数 (1/W)
+
+nyb = 1.93      # calgo的折射率 (N0 = 1.9331、Ne = 1.9564)
+n0 = 1.33       # 基底材料的折射率

@@ -1,0 +1,16 @@
+# === 光谱整形信号光参数配置 ===
+# 目标：复现100fs参数
+
+lambda_s = 1040e-9      # 中心波长 1040 nm
+bandwidth = 38e-9       # FWHM 带宽 38 nm
+E_seed = 0.8e-9         # 种子能量 0.8 nJ
+w_s = 190e-6            # 种子光斑半径
+freq = 43e3             # 43 kHz
+M_l = 2                 # 往返
+round_trips = 90        # 程数 (根据功率微调)
+tau_stretched = 140e-12 # 展宽后 140 ps
+
+# 种子光谱预整形参数(腔外)
+shaping_depth = 0.80         # 挖坑深度 [0.0 - 1.0], 0表示不开启
+shaping_center = 1040e-9     # 滤波中心波长 [m]
+shaping_width = 15e-9        # 滤波带宽 (FWHM) [m]
